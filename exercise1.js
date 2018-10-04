@@ -6,7 +6,7 @@ const dateOfBirthArray = [23, 35, 40];
 const calculateOldest = (names, dateOfBirth) => {
     let oldest = dateOfBirth[0];
     let index;
-    for (var i = 0; i < dateOfBirth.length; i++) {
+    for (let i = 0; i < dateOfBirth.length; i++) {
         if (dateOfBirth[i] > oldest) {
             oldest = dateOfBirth[i]
             index = i;
@@ -19,3 +19,5 @@ const calculateOldest = (names, dateOfBirth) => {
 
 const oldest = calculateOldest(namesArray, dateOfBirthArray);
 console.log(oldest);
+
+//could sort the array then get first and last element.
