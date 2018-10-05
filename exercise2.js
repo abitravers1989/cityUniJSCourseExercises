@@ -43,22 +43,25 @@ const sort = (arr) => {
 
 const calculateMinorMaxSum = (arr, method) => {
     let sortedArray = sort(arr);
-    console.log(method)
-    sortedArray = sortedArray.method;
-    console.log(sortedArray);
+    // console.log(method)
+    method(sortedArray);
+    //console.log(sortedArray);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const addedArray = sortedArray.reduce(reducer);
     return addedArray;
 }
 
-const pop = () => {
-    return Array.prototype.pop();
+const pop = (arr) => {
+    return arr.pop();
 }
 
-const shift = () => {
-    return Array.prototype.shift();
+const shift = (arr) => {
+    return arr.shift();
 }
 
 
 console.log(calculateMinorMaxSum(array2, pop));
 console.log(calculateMinorMaxSum(array2, shift));
+
+console.log(calculateMinorMaxSum(array1, pop));
+console.log(calculateMinorMaxSum(array1, shift));
