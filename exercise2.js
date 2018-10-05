@@ -18,23 +18,47 @@ const sort = (arr) => {
     return newArray;
 }
 
-const calculateMinSum = (arr) => {
+// const calculateMinSum = (arr) => {
+//     let sortedArray = sort(arr);
+//     sortedArray.pop();
+//     // console.log(sortedArray);
+//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//     const addedArray = sortedArray.reduce(reducer);
+//     return addedArray;
+// }
+
+// const calculateMaxSum = (arr) => {
+//     let sortedArray = sort(arr);
+//     sortedArray.shift();
+//     // console.log(sortedArray);
+//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//     const addedArray = sortedArray.reduce(reducer);
+//     return addedArray;
+// }
+
+// console.log(calculateMinSum(array1));
+// console.log(calculateMaxSum(array1))
+
+
+
+const calculateMinorMaxSum = (arr, method) => {
     let sortedArray = sort(arr);
-    sortedArray.pop();
-    // console.log(sortedArray);
+    console.log(method)
+    sortedArray = sortedArray.method;
+    console.log(sortedArray);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const addedArray = sortedArray.reduce(reducer);
     return addedArray;
 }
 
-const calculateMaxSum = (arr) => {
-    let sortedArray = sort(arr);
-    sortedArray.shift();
-    // console.log(sortedArray);
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const addedArray = sortedArray.reduce(reducer);
-    return addedArray;
+const pop = () => {
+    return Array.prototype.pop();
 }
 
-console.log(calculateMinSum(array1));
-console.log(calculateMaxSum(array1));
+const shift = () => {
+    return Array.prototype.shift();
+}
+
+
+console.log(calculateMinorMaxSum(array2, pop));
+console.log(calculateMinorMaxSum(array2, shift));
