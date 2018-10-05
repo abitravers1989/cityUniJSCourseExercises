@@ -14,8 +14,27 @@ const sort = (arr) => {
 
         }
     }
-    console.log(newArray)
+    //console.log(newArray)
     return newArray;
 }
 
-sort(array2)
+const calculateMinSum = (arr) => {
+    let sortedArray = sort(arr);
+    sortedArray.pop();
+    // console.log(sortedArray);
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const addedArray = sortedArray.reduce(reducer);
+    return addedArray;
+}
+
+const calculateMaxSum = (arr) => {
+    let sortedArray = sort(arr);
+    sortedArray.shift();
+    // console.log(sortedArray);
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const addedArray = sortedArray.reduce(reducer);
+    return addedArray;
+}
+
+console.log(calculateMinSum(array1));
+console.log(calculateMaxSum(array1));
