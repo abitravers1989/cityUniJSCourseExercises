@@ -20,8 +20,8 @@ const array2 = [7, 69, 2, 221, 8974]
 // }
 
 const sort = arr => {
-    let smallest = arr[0];
-    let newArray = arr;
+    //let smallest = arr[0];
+    let newArray = [];
     ///loop through each one then take a count of how many bigger than and put it at that index in the array.//#endregion
     for (let x = 0; x < arr.length; x++) {
         let count = 0;
@@ -39,12 +39,14 @@ const sort = arr => {
         let arrayValue = {};
         arrayValue.arrayNum = arr[x];
         arrayValue.index = count;
-        console.log(arrayValue);
-        console.log(count);
-        console.log(newArray[count]);
+        // console.log(arrayValue);
+        // console.log(count);
 
-        newArray[count] = arrayValue.arrayNum
+        //console.log(newArray[count]);
+        newArray[count] = arrayValue.arrayNum;
+
     }
+
 
     console.log(newArray)
     return newArray;
