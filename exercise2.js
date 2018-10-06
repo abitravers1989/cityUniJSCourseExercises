@@ -1,9 +1,27 @@
 const array1 = [1, 2, 3, 4, 5]
 const array2 = [7, 69, 2, 221, 8974]
 
+
+// const bubbleSort = arr => {
+//     //loop through the array. 
+//     //compare first two items.
+
+//     ///why do you start from the last one?
+//     for (i = 0; i < arr.l ) {
+//         if (arr[0] > arr[1]) {
+//             let temp;
+//             arr[0] = temp;
+//             arr[0] = arr[1];
+//             console.log(arr[0])
+//             arr[1] = temp;
+//         }
+//     }
+
+// }
+
 const sort = arr => {
     let smallest = arr[0];
-    let newArray = [];
+    let newArray = arr;
     ///loop through each one then take a count of how many bigger than and put it at that index in the array.//#endregion
     for (let x = 0; x < arr.length; x++) {
         let count = 0;
@@ -22,7 +40,15 @@ const sort = arr => {
         arrayValue.arrayNum = arr[x];
         arrayValue.index = count;
         console.log(arrayValue);
+        console.log(count);
+        console.log(newArray[count]);
+
+        newArray[count] = arrayValue.arrayNum
     }
+
+    console.log(newArray)
+    return newArray;
+
     // for (let i = 0; i < arr.length; i++) {
     //     if (arr[0] <= arr[i]) {
     //         //newArray.unshift(arr[0]);
@@ -57,8 +83,7 @@ const sort = arr => {
     //     }
     //     console.log(newArray)
     // }
-    console.log(newArray)
-    return newArray;
+
 
 }
 
