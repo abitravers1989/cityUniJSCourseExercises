@@ -106,7 +106,10 @@ const shift = (arr) => {
     return arr.shift();
 }
 
-const array3 = [14, 43, 95, 73, 36];
+//const array2 = [14, 43, 95, 73, 36];
+
+
+const array3 = [14, 43, 95, 4999999, 73, 36, 3, 666666, 222, 1222];
 sort(array3);
 // console.log(calculateMinorMaxSum(array2, pop));
 // console.log(calculateMinorMaxSum(array2, shift));
