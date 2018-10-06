@@ -4,27 +4,49 @@ const array2 = [7, 69, 2, 221, 8974]
 const sort = arr => {
     let smallest = arr[0];
     let newArray = [];
-    let count = 0;
     ///loop through each one then take a count of how many bigger than and put it at that index in the array.//#endregion
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[0] <= arr[i]) {
-            //newArray.unshift(arr[0]);
-            // console.log(count)
-        } else {
-            //newArray.push(arr[0])
-            count += 1;
-            // console.log(count);
+    for (let x = 0; x < arr.length; x++) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[x] <= arr[i]) {
+
+                //newArray.unshift(arr[0]);
+                //console.log(count)
+            } else {
+                //newArray.push(arr[0])
+                count += 1;
+                //console.log(count);
+            }
         }
+        let arrayValue = {};
+        arrayValue.arrayNum = arr[x];
+        arrayValue.index = count;
+        console.log(arrayValue);
     }
-    let arrayValue = {};
-    arrayValue.arrayNum = arr[0];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[0] <= arr[i]) {
+    //         //newArray.unshift(arr[0]);
+    //         // console.log(count)
+    //     } else {
+    //         //newArray.push(arr[0])
+    //         count += 1;
+    //         // console.log(count);
+    //     }
+    // }
+    // let arrayValue = {};
+    // arrayValue.arrayNum = arr[0];
 
-    //want to add a property to a variable.
 
-    arrayValue.index = count;
-    console.log(arrayValue)
+    // arrayValue.index = count;
+    // console.log(arrayValue)
     // let indexofArray = count;
     // console.log(count);
+
+
+
+
+
+
 
     // for (let i = 0; i < arr.length; i++) {
     //     if (arr[i] <= smallest) {
