@@ -11,28 +11,24 @@ const sort = arr => {
         for (let i = 0; i < arr.length; i++) {
             if (arr[x] > arr[i]) count += 1;
         }
-        // if (!newArray[count]) {
-        //     newArray[count] = arr[x];
-        // } else {
         for (let y = count; y < arr.length; y++) {
             if (!newArray[y]) {
-                //console.log(arr[x])
                 newArray[y] = arr[x];
                 break
             } else {
                 newArray[count] = arr[x];
             }
         }
-        // }
     }
     console.log(newArray)
     return newArray;
 }
 
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
 const calculateMinorMaxSum = (arr, method) => {
     let sortedArray = sort(arr);
     method(sortedArray);
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const addedArray = sortedArray.reduce(reducer);
     return addedArray;
 }
@@ -48,10 +44,10 @@ const shift = (arr) => {
 //const array2 = [14, 43, 95, 73, 36];
 
 
-const array3 = [14, 43, 43, 4999999, 43, 36, 3, 666666, 222, 1222];
+const array3 = [14, 43, 43, 4999999, 43, 36, 3, 4999999, 222, 1222];
 sort(array3);
-// console.log(calculateMinorMaxSum(array2, pop));
-// console.log(calculateMinorMaxSum(array2, shift));
+console.log(calculateMinorMaxSum(array2, pop));
+console.log(calculateMinorMaxSum(array2, shift));
 
 // console.log(calculateMinorMaxSum(array1, pop));
 // console.log(calculateMinorMaxSum(array1, shift));
