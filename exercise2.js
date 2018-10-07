@@ -11,22 +11,16 @@ const sort = arr => {
         for (let i = 0; i < arr.length; i++) {
             if (arr[x] > arr[i]) count += 1;
         }
-        if (!newArray[count]) {
-            newArray[count] = arr[x];
-        } else {
-            for (let x = count; x < newArray.length; x++) {
-                if (!newArray[x]) newArray[x] = arr[x];
+        // if (!newArray[count]) {
+        //     newArray[count] = arr[x];
+        // } else {
+        for (let x = count; x < newArray.length; x++) {
+            if (!newArray[x]) {
+                newArray[x] = arr[x];
+                break
             }
         }
-
-        // newArray.forEach(element => {
-        //     if (element === arr[x]) {
-        //         newArray[count + 1] = arr[x];
-        //     } else {
-        //         newArray[count] = arr[x];
-        //     }
-        // });
-
+        // }
     }
     console.log(newArray)
     return newArray;
