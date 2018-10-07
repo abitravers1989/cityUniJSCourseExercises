@@ -3,95 +3,29 @@ const array2 = [7, 69, 2, 221, 8974]
 
 
 // const bubbleSort = arr => {
-//     //loop through the array. 
-//     //compare first two items.
-
-//     ///why do you start from the last one?
-//     for (i = 0; i < arr.l ) {
-//         if (arr[0] > arr[1]) {
-//             let temp;
-//             arr[0] = temp;
-//             arr[0] = arr[1];
-//             console.log(arr[0])
-//             arr[1] = temp;
-//         }
-//     }
-
-// }
 
 const sort = arr => {
-    //let smallest = arr[0];
     let newArray = [];
-    ///loop through each one then take a count of how many bigger than and put it at that index in the array.//#endregion
     for (let x = 0; x < arr.length; x++) {
         let count = 0;
         for (let i = 0; i < arr.length; i++) {
-            if (arr[x] <= arr[i]) {
-
-                //newArray.unshift(arr[0]);
-                //console.log(count)
-            } else {
-                //newArray.push(arr[0])
-                count += 1;
-                //console.log(count);
-            }
+            if (arr[x] > arr[i]) count += 1;
         }
-        let arrayValue = {};
-        arrayValue.arrayNum = arr[x];
-        arrayValue.index = count;
-        // console.log(arrayValue);
-        // console.log(count);
-
-        //console.log(newArray[count]);
-        newArray[count] = arrayValue.arrayNum;
+        newArray.forEach(element => {
+            if (element === arr[x]) {
+                newArray[count + 1] = arr[x];
+            } else {
+                newArray[count] = arr[x];
+            }
+        });
 
     }
-
-
     console.log(newArray)
     return newArray;
-
-    // for (let i = 0; i < arr.length; i++) {
-    //     if (arr[0] <= arr[i]) {
-    //         //newArray.unshift(arr[0]);
-    //         // console.log(count)
-    //     } else {
-    //         //newArray.push(arr[0])
-    //         count += 1;
-    //         // console.log(count);
-    //     }
-    // }
-    // let arrayValue = {};
-    // arrayValue.arrayNum = arr[0];
-
-
-    // arrayValue.index = count;
-    // console.log(arrayValue)
-    // let indexofArray = count;
-    // console.log(count);
-
-
-
-
-
-
-
-    // for (let i = 0; i < arr.length; i++) {
-    //     if (arr[i] <= smallest) {
-    //         newArray.unshift(arr[i])
-    //         smallest = arr[i];
-    //     } else {
-    //         newArray.push(arr[i])
-    //     }
-    //     console.log(newArray)
-    // }
-
-
 }
 
 const calculateMinorMaxSum = (arr, method) => {
     let sortedArray = sort(arr);
-    // console.log(sortedArray);
     method(sortedArray);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const addedArray = sortedArray.reduce(reducer);
@@ -109,7 +43,7 @@ const shift = (arr) => {
 //const array2 = [14, 43, 95, 73, 36];
 
 
-const array3 = [14, 43, 95, 4999999, 73, 36, 3, 666666, 222, 1222];
+const array3 = [14, 43, 43, 4999999, 73, 36, 3, 666666, 222, 1222];
 sort(array3);
 // console.log(calculateMinorMaxSum(array2, pop));
 // console.log(calculateMinorMaxSum(array2, shift));
