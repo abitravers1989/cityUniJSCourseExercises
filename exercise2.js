@@ -14,10 +14,13 @@ const sort = arr => {
         // if (!newArray[count]) {
         //     newArray[count] = arr[x];
         // } else {
-        for (let x = count; x < newArray.length; x++) {
-            if (!newArray[x]) {
-                newArray[x] = arr[x];
+        for (let y = count; y < arr.length; y++) {
+            if (!newArray[y]) {
+                //console.log(arr[x])
+                newArray[y] = arr[x];
                 break
+            } else {
+                newArray[count] = arr[x];
             }
         }
         // }
