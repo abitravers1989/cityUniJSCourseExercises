@@ -14,7 +14,9 @@ const sort = arr => {
         if (!newArray[count]) {
             newArray[count] = arr[x];
         } else {
-            newArray[count + 1] = arr[x];
+            for (let x = count; x < newArray.length; x++) {
+                if (!newArray[x]) newArray[x] = arr[x];
+            }
         }
 
         // newArray.forEach(element => {
@@ -49,7 +51,7 @@ const shift = (arr) => {
 //const array2 = [14, 43, 95, 73, 36];
 
 
-const array3 = [14, 43, 43, 4999999, 73, 36, 3, 666666, 222, 1222];
+const array3 = [14, 43, 43, 4999999, 43, 36, 3, 666666, 222, 1222];
 sort(array3);
 // console.log(calculateMinorMaxSum(array2, pop));
 // console.log(calculateMinorMaxSum(array2, shift));
