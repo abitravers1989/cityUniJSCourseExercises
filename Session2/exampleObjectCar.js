@@ -25,3 +25,21 @@ for (const properties in car) {
 
     console.log(message)
 }
+
+//check if an object has a property
+const hasProperty = car.hasOwnProperty('lights');
+
+console.log(hasProperty)
+
+const carCopy = car;
+
+console.log(carCopy)
+
+//this changes the amount of doors on orignal car too
+carCopy.doors = 7;
+
+console.log('car:')
+console.log(car)
+console.log('copy:')
+console.log(carCopy)
+
