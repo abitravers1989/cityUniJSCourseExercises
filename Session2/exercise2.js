@@ -20,15 +20,18 @@ let newArray = [john, ruth, peter, youngestPerson];
 //youngest
 //USE REDUCE with conditional (ternary) operator
 let youngest = newArray[0].age
-//this should be const as global scoped 
-
+//this should be var as global scoped 
 for (i = 0; i < newArray.length; i++) {
     //why can i access youngest ?????
-
+    console.log(youngest)
     if (newArray[i].age < youngest) {
         youngest = newArray[i].age;
     }
+    console.log(youngest)
 }
+
+youngest = 877888;
+console.log(youngest)
 let youngestObject = newArray.filter(persons => persons.age <= youngest)
 
 //oldest
@@ -42,3 +45,4 @@ let oldestObject = newArray.filter(persons => persons.age >= oldest)
 
 console.log(`Youngest Object Name: ${youngestObject[0].name}, Age: ${youngestObject[0].age}`)
 console.log(`Oldest Object Name: ${oldestObject[0].name}, Age: ${oldestObject[0].age}`)
+
