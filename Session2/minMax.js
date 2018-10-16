@@ -1,4 +1,3 @@
-
 const sort = arr => {
     let newArray = [];
     for (let x = 0; x < arr.length; x++) {
@@ -36,7 +35,7 @@ const shift = (arr) => {
     return arr.shift();
 }
 
-//const array2 = [14, 43, 95, 73, 36];
+const array2 = [14, 43, 95, 73, 36];
 
 
 const array3 = [14, 43, 43, 4999999, 43, 36, 3, 4999999, 222, 1222];
@@ -46,3 +45,14 @@ const array1 = [1, 2, 3, 4, 5]
 const array2 = [7, 69, 2, 221, 8974]
 console.log(calculateMinorMaxSum(array2, pop));
 console.log(calculateMinorMaxSum(array2, shift));
+
+
+
+// const data = [];
+
+// for (let x = 1; x <= 10000; x++) {
+//     data.push({ x: x, y: Math.floor(Math.random() * (10000)) })
+// }
+
+// const sortedLargeArray = sort(data);
+// console.log(sortedLargeArray)

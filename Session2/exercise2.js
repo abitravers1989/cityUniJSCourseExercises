@@ -1,11 +1,7 @@
-
-//https://codeburst.io/jsnoob-ways-to-create-an-object-including-es6-way-565a0fdaddb7
-
 function Person(name, age) {
     this.name = name;
     this.age = age;
 }
-
 
 let john = new Person('John', 25)
 
@@ -16,11 +12,19 @@ let peter = new Person('Peter', 55)
 let youngestPerson = new Person('youngestPerson', 21)
 
 let newArray = [john, ruth, peter, youngestPerson];
-//console.log(newArray)
+
+
+//why does function scope not inheret from global scope es5
+
 
 //youngest
+//USE REDUCE with conditional (ternary) operator
 let youngest = newArray[0].age
+//this should be const as global scoped 
+
 for (i = 0; i < newArray.length; i++) {
+    //why can i access youngest ?????
+
     if (newArray[i].age < youngest) {
         youngest = newArray[i].age;
     }

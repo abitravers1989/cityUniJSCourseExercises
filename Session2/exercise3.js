@@ -20,6 +20,7 @@ peter.age = 553;
 let newArray = [john, ruth, peter];
 //console.log(newArray)
 
+
 //youngest
 let youngest = newArray[0].age
 for (i = 0; i < newArray.length; i++) {
