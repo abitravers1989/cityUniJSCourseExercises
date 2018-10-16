@@ -54,16 +54,26 @@ let newArray = [john, ruth, peter];
 
 
 let youngest = newArray[0].age
-for (i = 0; i < newArray.length; i++) {
-    if (newArray[i].age < youngest) {
-        youngest = newArray[i].age;
+
+const isSmallest = (person) => {
+    // console.log(person.age);
+    // console.log(youngest)
+    if (person.age <= youngest) {
+        youngest = person
     }
+    return youngest
+    console.log(youngest);
 }
-
-console.log(youngest);
-
-let youngerObject = newArray.filter(person => person.age <= youngest)
+let youngerObject = newArray.filter(isSmallest)
 console.log(youngerObject)
+
+
+// 
+
+
+// let youngerObject = newArray.filter(person => person.age <= youngest)
+// console.log(youngerObject)
+
 
 // Step 6: 
 
