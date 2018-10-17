@@ -17,10 +17,9 @@ let newArray = [john, ruth, peter, youngestPerson];
 
 //have to give accumulated a value each time.
 const result = newArray.reduce((acc, cv) => {
-    console.log(acc.min)
     return {
-        min: cv.age < acc.min ? cv : acc.min,
-        max: cv.age > acc.max ? cv : acc.max
+        min: acc.min === 0 || cv.age < acc.min.age ? cv : acc.min,
+        max: acc.max === 0 || cv.age > acc.max.age ? cv : acc.max
     }
 }, { min: 0, max: 0 })
 
