@@ -1,4 +1,6 @@
 function Person(name, age) {
+    //because this is node this is scoped to this function and =Person
+    // console.log(this)
     this.name = name;
     this.age = age;
 }
@@ -16,23 +18,22 @@ let newArray = [john, ruth, peter, youngestPerson];
 
 //why does function scope not inheret from global scope es5
 
-
-//youngest
-//USE REDUCE with conditional (ternary) operator
-let youngest = newArray[0].age
-//this should be var as global scoped 
-for (i = 0; i < newArray.length; i++) {
-    //why can i access youngest ?????
-    console.log(youngest)
-    if (newArray[i].age < youngest) {
-        youngest = newArray[i].age;
-    }
-    console.log(youngest)
+const calculateYoungest = () => {
+    //USE REDUCE with conditional (ternary) operator
+    // let youngest = newArray[0].age
+    // //console.log(this.name)
+    // //this should be var as global scoped 
+    // for (i = 0; i < newArray.length; i++) {
+    //     return (newArray[i].age < youngest ? youngest = newArray[i].age : youngest)
+    // }
+    let youngest = newArray[0].age
+    const reducer = (accumulator, currentValue) => { if (currentValue.age <= youngest) { youngest = currentValue.age } }
+    newArray.reduce(reducer)
+    return youngest;
 }
 
-youngest = 877888;
-console.log(youngest)
-let youngestObject = newArray.filter(persons => persons.age <= youngest)
+
+let youngestObject = newArray.filter(persons => persons.age <= calculateYoungest())
 
 //oldest
 let oldest = newArray[0].age
