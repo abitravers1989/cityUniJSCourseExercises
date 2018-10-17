@@ -15,10 +15,13 @@ let youngestPerson = new Person('youngestPerson', 21)
 
 let newArray = [john, ruth, peter, youngestPerson];
 
-newArray.reduce((acc, cv) => {
-    console.log(acc, cv.age)
-    if (cv.age < acc) {
-        return cv.age
+const result = newArray.reduce((acc, cv) => {
+    //console.log(acc, cv.age)
+    if (cv.age < acc.age) {
+        return cv
     }
+    return acc;
     console.log(acc)
-}, newArray[0].age)
+}, newArray[0])
+
+console.log(result)
