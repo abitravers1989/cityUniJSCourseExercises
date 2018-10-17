@@ -28,6 +28,11 @@ for (i = 0; i < newArray.length; i++) {
         youngest = newArray[i].age;
     }
 }
+
+function findYoungest() {
+    return newArray.reduce((min, currentValue) => )
+}
+
 let youngestObject = newArray.filter(persons => persons.age <= youngest)
 
 //oldest
