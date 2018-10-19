@@ -3,8 +3,13 @@
 var calc = {
     total: 0,
     add: (number) => {
-        return calc.total + number;
+        calc.total += number;
+    },
+    subtract: (number) => {
+        calc.total -= number;
     }
 }
-
-console.log(calc.add(4))
+calc.add(4)
+console.log(calc.total)
+calc.subtract(66)
+console.log(calc.total)
