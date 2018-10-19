@@ -1,8 +1,7 @@
-let fullname = "john";
+var fullname = "john";
 
 var obj = {
     fullname: 'jane',
-    //ss: console.log(fullname),
     prop: {
         fullname: "tom",
         getName: function () {
@@ -13,10 +12,8 @@ var obj = {
 }
 
 var test = obj.prop.getName;
-// console.log(obj.prop.getName())
-// console.log(test())
 
-var binded = test.bind(obj)
+var binded = test.bind(obj.prop)
 console.log(binded())
 
 //The test() function returns the value: Tom.
