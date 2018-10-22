@@ -1,16 +1,18 @@
-
-
 var calc = {
     total: 0,
     add: (number) => {
-        return calc.total += number;
+        calc.total += number;
     },
     subtract: (number) => {
         return calc.total -= number;
     },
-    increment: () => {
-        console.log(calc.total)
-        return calc.total += 1;
+    increment: {
+        func: () => {
+            this.total = calc.total
+            this.total += 1;
+        },
+        binded: this.func.bind(calc),
+        binded()
     },
     decrement: () => {
         return calc.total -= 1;
@@ -21,6 +23,7 @@ var calc = {
 }
 result1 = calc.increment().add(10)
 console.log(result1);
+console.log(calc.total)
 
 // // Chain some methods
 // result1 = calc.increment().add(10).getTotal();
