@@ -19,3 +19,5 @@ class Food {
 
 const fooods = new Food('snake brain', '33g', '2g', '100g%')
 fooods.print()
+
+console.log(fooods.protein)
